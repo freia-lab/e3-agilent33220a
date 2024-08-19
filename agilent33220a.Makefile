@@ -25,7 +25,7 @@ EXCLUDE_ARCHS += linux-corei7-poky
 # Since this file (agilent33220a.Makefile) is copied into
 # the module directory at build-time, these paths have to be relative
 # to that path
-APP := agilent33220aApp
+APP := .
 APPDB := $(APP)/Db
 APPSRC := $(APP)/src
 

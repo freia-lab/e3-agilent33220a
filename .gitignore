@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 agilent33220a/*.Makefile
+agilent33220a/O.*
 cellMods/
 testMods*/
 *PVs.list

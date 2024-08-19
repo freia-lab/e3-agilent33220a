@@ -138,8 +138,18 @@ record(bo, "$(P)$(Q):TRIG") {
   field(DESC, "Manual Trigger")
   field(DTYP, "stream")
   field(OUT, "@agilent33220A.proto write_string(TRIG) $(PORT)")
-  field(FLNK, "$(P)$(Q):TRIG:RBV")
+  field(FLNK, "$(P)$(Q):TRIG-INT")
   field(SDIS, "$(P)$(Q):DISABLE")
+}
+
+record(calcout,"$(P)$(Q):TRIG-INT") {
+  field(CALC,"1")
+  field(OUT, "$(P)$(Q):TRIG:RBV PP")
+}
+record(bo, "$(P)$(Q):TRIG:RBV") {
+  field(VAL, "0")
+  field(PINI, "YES")
+  field(HIGH, "1.0")
 }
 
 #% gdatag,mbbinary,rw,$(name=),BURSTMODE

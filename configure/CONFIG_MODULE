@@ -5,11 +5,19 @@ E3_MODULE_NAME := agilent33220a
 E3_MODULE_SRC_PATH := $(EPICS_MODULE_NAME)
 E3_MODULE_MAKEFILE := $(E3_MODULE_NAME).Makefile
 
+OPI_VERSION := 1.1.0
+OPI_DIRNAME := llrf-sigGen
+
 # If you have any module dependencies, put them here:
 #
 #     STREAM_DEP_VERSION := 2.8.24+1
 #
 # These will be automatically picked up by the build system.
+
+STREAM_DEP_VERSION:=2.8.24+1
+BUSY_DEP_VERSION:=1.7.3+2
+AUTOSAVE_DEP_VERSION:=5.10.2+2
+AFTERINIT_DEP_VERSION:=1.2.1+0
 
 -include $(TOP)/configure/CONFIG_OPTIONS
 -include $(TOP)/configure/CONFIG_MODULE.local
