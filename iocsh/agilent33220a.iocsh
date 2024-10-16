@@ -1,0 +1,24 @@
+# This should be the included snippet to configure and run the deployed IOC. 
+# It should be loaded with
+#
+#   iocshLoad("$(agilent33220a_DIR)agilent33220a.iocsh", "IP=xxx.yyy.zzz.nnn P=prefix IP_PORT=iiii")
+
+#- ###            agilent33220a iocsh               ###
+#- ####################################################
+#- >> Mandatory
+#- IP         - Instrument's IP address
+#- P	      - PV name prefix, pvname: $(P)$(DEV)...
+#- IOCNAME    - iocname for the asyn record pv prefix
+
+#  >> Optional
+#  IP_PORT    - IP port number (default 5025)
+#  ASYN_PORT  - asyn port name (default PORT1)
+#  DEV        - device name (part of the PV name (default FUNCGEN)
+
+drvAsynIPPortConfigure("$(ASYN_PORT=PORT1)", "$(IP):$(IP_PORT=5025)",0,0,0)
+
+#Indicate the folder where the protocol file is installed
+epicsEnvSet("STREAM_PROTOCOL_PATH","$(agilent33220a_DB)")
+
+#Load your database defining the EPICS records
+dbLoadRecords("agilent33220A.template", "PORT=$(ASYN_PORT=PORT1),P=$(P),Q=$(DEV=FUNCGEN)")

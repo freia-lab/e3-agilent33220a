@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-08-22 14:06:51 by konrad-->
+<display version="2.0.0">
+  <name>Agilent Func. Gen.</name>
+  <macros>
+    <agilent>LLRF-1:FUNCGEN-1</agilent>
+    <IOC>ioc29-llrffuncgen</IOC>
+  </macros>
+  <height>900</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Agilent 33220A Arbitrary Funtion Generator </text>
+    <x use_class="true">20</x>
+    <y use_class="true">0</y>
+    <width>680</width>
+    <height use_class="true">50</height>
+    <font use_class="true">
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment use_class="true">0</horizontal_alignment>
+    <vertical_alignment use_class="true">1</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <file>helper-opi-files/agilent33220A.bob</file>
+    <y>60</y>
+    <width>380</width>
+    <height>790</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <file>../freia-symbols/display-builder/agilent/agilent33220A.bob</file>
+    <x>380</x>
+    <y>60</y>
+    <width>380</width>
+    <height>790</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>helper-opi-files/agilent33220A.bob</text>
+    <y>840</y>
+    <width>350</width>
+    <font>
+      <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>../freia-symbols/display-builder/agilent/agilent33220A.bob</text>
+    <x>380</x>
+    <y>840</y>
+    <width>350</width>
+    <font>
+      <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+</display>
